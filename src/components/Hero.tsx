@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { FileText, GraduationCap, Linkedin, Mail } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/profile-photo-paula.jpg";
 
 export const Hero = () => {
 
@@ -13,7 +13,7 @@ export const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-secondary to-accent rounded-full blur-2xl opacity-20 animate-pulse-glow"></div>
             <img
               src={profilePhoto}
-              alt="Cristian Felipe Rodríguez Ospino"
+              alt="Paula Guzmán"
               className="relative w-80 h-80 object-cover rounded-full border-4 border-background shadow-2xl hover:scale-105 transition-transform duration-500"
             />
           </div>
@@ -23,33 +23,31 @@ export const Hero = () => {
         <div className="space-y-6 order-2 lg:order-1 animate-slide-in-left">
           <div className="space-y-3">
             <h1 className="text-5xl lg:text-6xl font-bold text-primary leading-tight">
-              Cristian Felipe
-              <br />
-              Rodríguez Ospino
+              Paula Guzmán
             </h1>
             <div className="space-y-2">
               <p className="text-xl lg:text-2xl text-secondary font-semibold">
-                Instructor Professor in Biomedical Engineering
+                MSc in Biomedical Engineering
               </p>
               <p className="text-lg lg:text-xl text-muted-foreground font-medium">
                 Universidad de los Andes
               </p>
               <p className="text-base lg:text-lg text-muted-foreground">
-                AI-Driven Modeling and Simulation for Nanomaterials and Biomedical Systems
+                Molecular Biotechnology, CRISPR-Cas & Tissue Engineering
               </p>
             </div>
           </div>
 
           <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            I am a computational materials researcher and biomedical engineer focused on leveraging{" "}
-            <span className="text-primary font-semibold">artificial intelligence, statistical modeling, and multiphysics simulations</span>{" "}
-            to accelerate the design and understanding of nanomaterials. My work integrates data-driven inference with physics-based models, 
-            combining tools such as GROMACS, COMSOL Multiphysics, and Python-based{" "}
-            <span className="text-primary font-semibold">machine learning</span> to predict structure–property relationships and optimize 
-            material performance. I am particularly interested in how AI and in-silico modeling can guide the synthesis of magnetic 
-            nanoparticles, MOFs, and polymeric systems for drug delivery, bioimaging, and lab-on-a-chip technologies. As an educator, 
-            I bridge data analytics, machine learning, and materials engineering, helping students and collaborators translate complex 
-            simulations into experimentally validated insights for real biomedical impact.
+            Soy Ingeniera Biomédica y Magíster en Ingeniería Biomédica con experiencia en{" "}
+            <span className="text-primary font-semibold">biotecnología molecular, edición genética CRISPR-Cas, y desarrollo de dispositivos médicos</span>.{" "}
+            Mi enfoque integra la transferencia tecnológica con la innovación académica, colaborando con entidades privadas y programas como{" "}
+            <span className="text-primary font-semibold">DESCUBRE e IMPACTA</span> para llevar investigaciones al mercado. 
+            Cuento con sólidas habilidades analíticas, gestión de proyectos académicos, y comunicación efectiva en español e inglés. 
+            Mi motivación radica en generar{" "}
+            <span className="text-primary font-semibold">impacto desde la universidad</span>, contribuyendo a la innovación y emprendimiento 
+            basados en ciencia y tecnología, especialmente en{" "}
+            <span className="text-primary font-semibold">ingeniería de tejidos, terapias génicas y nanobiomateriales</span>.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
@@ -59,21 +57,21 @@ export const Hero = () => {
               className="w-52 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = '/CV_Cristian_Rodriguez_2025.docx';
-                link.download = 'CV_Cristian_Rodriguez_2025.docx';
+                link.href = '/CV_Paula_Guzman_2025.pdf';
+                link.download = 'CV_Paula_Guzman_2025.pdf';
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
               }}
             >
               <FileText className="mr-2 h-5 w-5" />
-              Download CV
+              Descargar CV
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="w-52 border-2 border-secondary text-secondary hover:bg-secondary hover:text-white transition-all duration-300 hover:scale-105"
-              onClick={() => window.open('https://scholar.google.com/citations?user=ZtjgHeMAAAAJ&hl=en', '_blank')}
+              onClick={() => window.open('https://scholar.google.com', '_blank')}
             >
               <GraduationCap className="mr-2 h-5 w-5" />
               Google Scholar
@@ -82,7 +80,7 @@ export const Hero = () => {
               variant="outline"
               size="lg"
               className="w-52 border-2 border-secondary text-secondary hover:bg-secondary hover:text-white transition-all duration-300 hover:scale-105"
-              onClick={() => window.open('https://www.linkedin.com/in/cristian-felipe-rodriguez-ospino/', '_blank')}
+              onClick={() => window.open('https://linkedin.com', '_blank')}
             >
               <Linkedin className="mr-2 h-5 w-5" />
               LinkedIn
@@ -91,10 +89,10 @@ export const Hero = () => {
               variant="outline"
               size="lg"
               className="w-52 border-2 border-accent text-primary hover:bg-accent transition-all duration-300 hover:scale-105"
-              onClick={() => window.location.href = 'mailto:cf.rodriguez@uniandes.edu.co'}
+              onClick={() => window.location.href = 'mailto:pa.guzmans@uniandes.edu.co'}
             >
               <Mail className="mr-2 h-5 w-5" />
-              Contact Me
+              Contacto
             </Button>
           </div>
         </div>

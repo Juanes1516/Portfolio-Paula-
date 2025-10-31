@@ -16,41 +16,62 @@ interface Position {
 const positions: Position[] = [{
   id: "2024-present",
   year: "2024 – Presente",
-  title: "Assistant Researcher",
+  title: "Profesional en Proyectos de Investigación",
   organization: "Universidad de los Andes",
-  department: "Department of Biomedical Engineering",
-  description: ["Diseño y simulación de dispositivos microfluídicos y nanomateriales usando COMSOL Multiphysics y GROMACS", "Integración de inteligencia artificial para optimizar síntesis de materiales"],
-  skills: ["COMSOL", "CFD", "GROMACS", "Nanomateriales", "AI", "Machine Learning", "Python", "Investigación aplicada"],
+  department: "Departamento de Ingeniería Biomédica",
+  description: [
+    "Coordinación de proyectos académicos y de investigación en colaboración con Plastinovo S.A.S.",
+    "Participación en programas DESCUBRE e IMPACTA para transferencia tecnológica",
+    "Diseño de modelos anatómicos para docencia y capacitación médica",
+    "Publicaciones y capítulos de libro como primera autora"
+  ],
+  skills: ["Gestión de Proyectos", "Transferencia Tecnológica", "Investigación Aplicada", "Comunicación Científica", "Dispositivos Médicos"],
   icon: FlaskConical,
   color: "from-secondary to-secondary/80"
 }, {
-  id: "2022-2023-admin",
-  year: "2022 – 2023",
-  title: "Administrative Graduate Assistant",
+  id: "2022-2024",
+  year: "2022 – 2024",
+  title: "Asistente Graduada de Docencia e Investigadora",
   organization: "Universidad de los Andes",
-  department: "Faculty of Engineering",
-  description: ["Coordinación de proyectos de innovación y comunicación científica", "Soporte académico y gestión en la Facultad de Ingeniería"],
-  skills: ["Comunicación científica", "Gestión académica", "Coordinación de proyectos", "Docencia universitaria"],
-  icon: Briefcase,
-  color: "from-accent to-accent/80"
-}, {
-  id: "2022-2023-teaching",
-  year: "2022 – 2023",
-  title: "Teaching Assistant",
-  organization: "Universidad de los Andes",
-  description: ["Cursos: Nanobiotecnología, 3D Bioprinting, Biological Transport Phenomena", "Apoyo en diseño de contenidos y evaluación"],
-  skills: ["Docencia", "Bioimpresión 3D", "Bioingeniería", "Mentoría", "Python para análisis de datos"],
+  department: "Departamento de Ingeniería Biomédica",
+  description: [
+    "Gestión integral de cursos de Fisiología Cuantitativa I y II",
+    "Coordinación de actividades académicas y recursos logísticos",
+    "Investigación en terapias génicas para enfermedades neurodegenerativas",
+    "Aplicación de técnicas avanzadas de biología molecular",
+    "Síntesis de nanobiomateriales"
+  ],
+  skills: ["Docencia", "CRISPR-Cas", "Terapias Génicas", "Biología Molecular", "Nanobiomateriales", "Gestión Académica"],
   icon: GraduationCap,
   color: "from-primary to-primary/80"
 }, {
-  id: "2021-2024",
-  year: "2021 – 2024",
-  title: "Research Collaborator",
-  organization: "Grupo Neurociencia de Antioquia (UdeA)",
-  description: ["Evaluación de nanomateriales en neurobiología celular y molecular", "Integración de simulación con experimentación biológica"],
-  skills: ["Nanotecnología", "Análisis de datos", "Modelado biológico", "Redacción científica"],
+  id: "2021-2022",
+  year: "2021 – 2022",
+  title: "Investigadora",
+  organization: "Grupo de Dinámica Cardiovascular",
+  department: "Universidad de los Andes - Fundación Cardioinfantil",
+  description: [
+    "Gestión de presupuestos y coordinación con médicos especialistas",
+    "Planificación de procedimientos quirúrgicos con reconstrucción e impresión 3D",
+    "Ensayo clínico para evaluación de apósitos regenerativos (SIS)",
+    "Participación en iniciativa educativa EduCardio"
+  ],
+  skills: ["Investigación Clínica", "Impresión 3D", "Biomateriales", "Ingeniería de Tejidos", "Gestión de Proyectos"],
   icon: BookOpen,
   color: "from-secondary/80 to-accent"
+}, {
+  id: "2021-actualidad",
+  year: "2021 – Presente",
+  title: "Co-fundadora y CTO",
+  organization: "Coatible",
+  description: [
+    "Diseño y desarrollo de película hidrofóbica para laparoscopios",
+    "Gestión de todas las etapas desde diseño técnico hasta validación",
+    "Reconocimientos: Mejor Proyecto 2023-2 (BITT), Tercer Mejor Proyecto Deep Tech 2024"
+  ],
+  skills: ["Emprendimiento", "Innovación", "Desarrollo de Producto", "Validación Técnica", "Dispositivos Médicos"],
+  icon: Briefcase,
+  color: "from-accent to-accent/80"
 }];
 const allSkills = Array.from(new Set(positions.flatMap(p => p.skills))).sort();
 export const Timeline = () => {
@@ -68,7 +89,7 @@ export const Timeline = () => {
         {/* Header */}
         <div className="text-center space-y-4 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold text-primary">
-            Professional Experience
+            Experiencia Profesional
           </h2>
           
         </div>

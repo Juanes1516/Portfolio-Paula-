@@ -24,44 +24,36 @@ type CourseCard = {
 
 const courses: CourseCard[] = [
   {
-    title: "Biomaterials",
-    year: "2025",
+    title: "Fisiología Cuantitativa I",
+    year: "2022-2024",
     image: courseBiomaterials,
-    alt: "Biomaterials course - nanoparticle synthesis and characterization",
-    description: "Physical/chemical/biocompatibility requirements of synthetic and natural biomaterials; polymers, surface functionalization, 3D printing, and simulation of material–tissue interactions.",
-    tags: ["MaterialsScience", "Polymers", "3DPrinting", "Simulation"],
+    alt: "Fisiología Cuantitativa I",
+    description: "Curso de pregrado enfocado en modelado cuantitativo de sistemas fisiológicos con coordinación académica integral.",
+    tags: ["Docencia", "Fisiología", "Modelado"],
   },
   {
-    title: "3D Bioprinting",
-    year: "2025",
+    title: "Fisiología Cuantitativa II",
+    year: "2022-2024",
     image: courseBioprinting,
-    alt: "3D Bioprinting course - computational modeling",
-    description: "Bioink formulation and printing (extrusion, inkjet, laser) with CAD, rheology, and multiphysics modeling; application to tissue engineering and advanced in-silico optimization.",
-    tags: ["Bioinks", "Rheology", "TissueEngineering", "Multiphysics"],
+    alt: "Fisiología Cuantitativa II",
+    description: "Continuación de fisiología cuantitativa con énfasis en sistemas avanzados y gestión académica.",
+    tags: ["Fisiología", "Análisis", "Gestión"],
   },
   {
-    title: "Nanobiotechnology",
-    year: "2025",
+    title: "Biomateriales y Nanobiomateriales",
+    year: "2023-2024",
     image: courseNanobiotech,
-    alt: "Nanobiotechnology course - paclitaxel nanobioconjugates",
-    description: "Quantum dots, metallic nanoparticles, liposomes, polymeric and MOF nanomaterials; GROMACS molecular dynamics to predict nanomaterial–biomolecule interactions with AI-assisted analysis.",
-    tags: ["Nanotech", "GROMACS", "MolecularDynamics", "AIinMaterials"],
+    alt: "Nanobiomateriales",
+    description: "Síntesis y caracterización de nanobiomateriales para terapias génicas y medicina regenerativa.",
+    tags: ["Nanomateriales", "Biomateriales", "Investigación"],
   },
   {
-    title: "Design of Experiments & Biostatistics",
-    year: "2025",
-    image: courseBiostatistics,
-    alt: "Design of Experiments & Biostatistics course - machine learning clustering",
-    description: "Foundation in probability, statistical inference, and experimental design; emphasizes data-driven modeling and introductory machine learning for biomedical datasets (Python).",
-    tags: ["Statistics", "ExperimentalDesign", "MachineLearning", "Python"],
-  },
-  {
-    title: "Nanoengineering",
-    year: "2025",
+    title: "CRISPR-Cas y Terapias Génicas",
+    year: "2023-2024",
     image: courseNanoengineering,
-    alt: "Nanoengineering course - graph neural networks",
-    description: "Integrates in-silico + experimental approaches for nanomaterial synthesis and microfluidic device design; couples COMSOL multiphysics modeling with lab validation for biomedical solutions.",
-    tags: ["InSilico", "COMSOL", "Microfluidics", "Nanomaterials"],
+    alt: "Biotecnología Molecular",
+    description: "Edición genética CRISPR-Cas para terapias en enfermedades neurodegenerativas.",
+    tags: ["CRISPR", "EdiciónGenética", "TerapiasGénicas"],
   },
 ];
 
@@ -72,13 +64,13 @@ export const CoursesTeaching = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-3 text-slate-900">
-            Courses & Teaching
+            Docencia e Investigación
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
-            AI-driven, in-silico, and materials-focused teaching at Universidad de los Andes
+            Biotecnología molecular, CRISPR-Cas e ingeniería de tejidos
           </p>
           <Badge variant="secondary" className="text-sm px-4 py-1.5">
-            Teaching evaluation 4.9/5.0 — Top quartile (Faculty of Engineering)
+            Excelencia Académica — Universidad de los Andes
           </Badge>
         </div>
 
