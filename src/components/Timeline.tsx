@@ -15,61 +15,61 @@ interface Position {
 }
 const positions: Position[] = [{
   id: "2024-present",
-  year: "2024 – Presente",
-  title: "Profesional en Proyectos de Investigación",
+  year: "2024 – Present",
+  title: "Research Project Professional",
   organization: "Universidad de los Andes",
-  department: "Departamento de Ingeniería Biomédica",
+  department: "Department of Biomedical Engineering",
   description: [
-    "Coordinación de proyectos académicos y de investigación en colaboración con Plastinovo S.A.S.",
-    "Participación en programas DESCUBRE e IMPACTA para transferencia tecnológica",
-    "Diseño de modelos anatómicos para docencia y capacitación médica",
-    "Publicaciones y capítulos de libro como primera autora"
+    "Coordination of academic and research projects in collaboration with Plastinovo S.A.S.",
+    "Participation in DESCUBRE and IMPACTA programs for technology transfer",
+    "Design of anatomical models for teaching and medical training",
+    "Publications and book chapters as first author"
   ],
-  skills: ["Gestión de Proyectos", "Transferencia Tecnológica", "Investigación Aplicada", "Comunicación Científica", "Dispositivos Médicos"],
+  skills: ["Project Management", "Technology Transfer", "Applied Research", "Scientific Communication", "Medical Devices"],
   icon: FlaskConical,
   color: "from-secondary to-secondary/80"
 }, {
   id: "2022-2024",
   year: "2022 – 2024",
-  title: "Asistente Graduada de Docencia e Investigadora",
+  title: "Graduate Teaching Assistant and Researcher",
   organization: "Universidad de los Andes",
-  department: "Departamento de Ingeniería Biomédica",
+  department: "Department of Biomedical Engineering",
   description: [
-    "Gestión integral de cursos de Fisiología Cuantitativa I y II",
-    "Coordinación de actividades académicas y recursos logísticos",
-    "Investigación en terapias génicas para enfermedades neurodegenerativas",
-    "Aplicación de técnicas avanzadas de biología molecular",
-    "Síntesis de nanobiomateriales"
+    "Comprehensive management of Quantitative Physiology I and II courses",
+    "Coordination of academic activities and logistical resources",
+    "Research in gene therapies for neurodegenerative diseases",
+    "Application of advanced molecular biology techniques",
+    "Synthesis of nanobiomaterials"
   ],
-  skills: ["Docencia", "CRISPR-Cas", "Terapias Génicas", "Biología Molecular", "Nanobiomateriales", "Gestión Académica"],
+  skills: ["Teaching", "CRISPR-Cas", "Gene Therapies", "Molecular Biology", "Nanobiomaterials", "Academic Management"],
   icon: GraduationCap,
   color: "from-primary to-primary/80"
 }, {
   id: "2021-2022",
   year: "2021 – 2022",
-  title: "Investigadora",
-  organization: "Grupo de Dinámica Cardiovascular",
+  title: "Researcher",
+  organization: "Cardiovascular Dynamics Group",
   department: "Universidad de los Andes - Fundación Cardioinfantil",
   description: [
-    "Gestión de presupuestos y coordinación con médicos especialistas",
-    "Planificación de procedimientos quirúrgicos con reconstrucción e impresión 3D",
-    "Ensayo clínico para evaluación de apósitos regenerativos (SIS)",
-    "Participación en iniciativa educativa EduCardio"
+    "Budget management and coordination with specialist physicians",
+    "Planning of surgical procedures with 3D reconstruction and printing",
+    "Clinical trial for evaluation of regenerative dressings (SIS)",
+    "Participation in EduCardio educational initiative"
   ],
-  skills: ["Investigación Clínica", "Impresión 3D", "Biomateriales", "Ingeniería de Tejidos", "Gestión de Proyectos"],
+  skills: ["Clinical Research", "3D Printing", "Biomaterials", "Tissue Engineering", "Project Management"],
   icon: BookOpen,
   color: "from-secondary/80 to-accent"
 }, {
   id: "2021-actualidad",
-  year: "2021 – Presente",
-  title: "Co-fundadora y CTO",
+  year: "2021 – Present",
+  title: "Co-founder and CTO",
   organization: "Coatible",
   description: [
-    "Diseño y desarrollo de película hidrofóbica para laparoscopios",
-    "Gestión de todas las etapas desde diseño técnico hasta validación",
-    "Reconocimientos: Mejor Proyecto 2023-2 (BITT), Tercer Mejor Proyecto Deep Tech 2024"
+    "Design and development of hydrophobic film for laparoscopes",
+    "Management of all stages from technical design to validation",
+    "Awards: Best Project 2023-2 (BITT), Third Best Deep Tech Project 2024"
   ],
-  skills: ["Emprendimiento", "Innovación", "Desarrollo de Producto", "Validación Técnica", "Dispositivos Médicos"],
+  skills: ["Entrepreneurship", "Innovation", "Product Development", "Technical Validation", "Medical Devices"],
   icon: Briefcase,
   color: "from-accent to-accent/80"
 }];
@@ -89,7 +89,7 @@ export const Timeline = () => {
         {/* Header */}
         <div className="text-center space-y-4 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold text-primary">
-            Experiencia Profesional
+            Professional Experience
           </h2>
           
         </div>

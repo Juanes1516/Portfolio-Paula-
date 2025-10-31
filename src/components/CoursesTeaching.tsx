@@ -24,36 +24,36 @@ type CourseCard = {
 
 const courses: CourseCard[] = [
   {
-    title: "Fisiología Cuantitativa I",
+    title: "Quantitative Physiology I",
     year: "2022-2024",
     image: courseBiomaterials,
     alt: "Fisiología Cuantitativa I",
-    description: "Curso de pregrado enfocado en modelado cuantitativo de sistemas fisiológicos con coordinación académica integral.",
-    tags: ["Docencia", "Fisiología", "Modelado"],
+    description: "Undergraduate course focused on quantitative modeling of physiological systems with comprehensive academic coordination.",
+    tags: ["Teaching", "Physiology", "Modeling"],
   },
   {
-    title: "Fisiología Cuantitativa II",
+    title: "Quantitative Physiology II",
     year: "2022-2024",
     image: courseBioprinting,
     alt: "Fisiología Cuantitativa II",
-    description: "Continuación de fisiología cuantitativa con énfasis en sistemas avanzados y gestión académica.",
-    tags: ["Fisiología", "Análisis", "Gestión"],
+    description: "Continuation of quantitative physiology with emphasis on advanced systems and academic management.",
+    tags: ["Physiology", "Analysis", "Management"],
   },
   {
-    title: "Biomateriales y Nanobiomateriales",
+    title: "Biomaterials and Nanobiomaterials",
     year: "2023-2024",
     image: courseNanobiotech,
     alt: "Nanobiomateriales",
-    description: "Síntesis y caracterización de nanobiomateriales para terapias génicas y medicina regenerativa.",
-    tags: ["Nanomateriales", "Biomateriales", "Investigación"],
+    description: "Synthesis and characterization of nanobiomaterials for gene therapies and regenerative medicine.",
+    tags: ["Nanomaterials", "Biomaterials", "Research"],
   },
   {
-    title: "CRISPR-Cas y Terapias Génicas",
+    title: "CRISPR-Cas and Gene Therapies",
     year: "2023-2024",
     image: courseNanoengineering,
     alt: "Biotecnología Molecular",
-    description: "Edición genética CRISPR-Cas para terapias en enfermedades neurodegenerativas.",
-    tags: ["CRISPR", "EdiciónGenética", "TerapiasGénicas"],
+    description: "CRISPR-Cas gene editing for therapies in neurodegenerative diseases.",
+    tags: ["CRISPR", "GeneEditing", "GeneTherapies"],
   },
 ];
 
@@ -64,13 +64,13 @@ export const CoursesTeaching = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-3 text-slate-900">
-            Docencia e Investigación
+            Teaching & Research
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
-            Biotecnología molecular, CRISPR-Cas e ingeniería de tejidos
+            Molecular biotechnology, CRISPR-Cas, and tissue engineering
           </p>
           <Badge variant="secondary" className="text-sm px-4 py-1.5">
-            Excelencia Académica — Universidad de los Andes
+            Academic Excellence — Universidad de los Andes
           </Badge>
         </div>
 

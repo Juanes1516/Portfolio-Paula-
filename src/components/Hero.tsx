@@ -39,15 +39,15 @@ export const Hero = () => {
           </div>
 
           <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            Soy Ingeniera Biomédica y Magíster en Ingeniería Biomédica con experiencia en{" "}
-            <span className="text-primary font-semibold">biotecnología molecular, edición genética CRISPR-Cas, y desarrollo de dispositivos médicos</span>.{" "}
-            Mi enfoque integra la transferencia tecnológica con la innovación académica, colaborando con entidades privadas y programas como{" "}
-            <span className="text-primary font-semibold">DESCUBRE e IMPACTA</span> para llevar investigaciones al mercado. 
-            Cuento con sólidas habilidades analíticas, gestión de proyectos académicos, y comunicación efectiva en español e inglés. 
-            Mi motivación radica en generar{" "}
-            <span className="text-primary font-semibold">impacto desde la universidad</span>, contribuyendo a la innovación y emprendimiento 
-            basados en ciencia y tecnología, especialmente en{" "}
-            <span className="text-primary font-semibold">ingeniería de tejidos, terapias génicas y nanobiomateriales</span>.
+            I am a Biomedical Engineer and Master in Biomedical Engineering with experience in{" "}
+            <span className="text-primary font-semibold">molecular biotechnology, CRISPR-Cas gene editing, and medical device development</span>.{" "}
+            My approach integrates technology transfer with academic innovation, collaborating with private entities and programs such as{" "}
+            <span className="text-primary font-semibold">DESCUBRE and IMPACTA</span> to bring research to market. 
+            I have strong analytical skills, academic project management, and effective communication in Spanish and English. 
+            My motivation lies in generating{" "}
+            <span className="text-primary font-semibold">impact from the university</span>, contributing to innovation and entrepreneurship 
+            based on science and technology, especially in{" "}
+            <span className="text-primary font-semibold">tissue engineering, gene therapies, and nanobiomaterials</span>.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
@@ -65,7 +65,7 @@ export const Hero = () => {
               }}
             >
               <FileText className="mr-2 h-5 w-5" />
-              Descargar CV
+              Download CV
             </Button>
             <Button
               variant="outline"
@@ -92,7 +92,7 @@ export const Hero = () => {
               onClick={() => window.location.href = 'mailto:pa.guzmans@uniandes.edu.co'}
             >
               <Mail className="mr-2 h-5 w-5" />
-              Contacto
+              Contact
             </Button>
           </div>
         </div>

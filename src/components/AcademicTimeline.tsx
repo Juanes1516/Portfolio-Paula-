@@ -54,36 +54,36 @@ const events: TimelineEvent[] = [{
   startDate: "2018",
   endDate: "2022",
   type: "education",
-  title: "Pregrado en Ingeniería Biomédica",
+  title: "Bachelor's in Biomedical Engineering",
   institution: "Universidad de los Andes",
   location: "Bogotá, Colombia",
-  shortDescription: "Tercer puesto entre graduados de la promoción. Beca Vamos Pa'lante.",
+  shortDescription: "Third place among graduating class. Vamos Pa'lante Scholarship.",
   fullDescription: [],
   sections: [{
-    title: "Reconocimientos Académicos",
+    title: "Academic Recognition",
     icon: "GraduationCap",
     items: [
-      "Tercer puesto entre los graduados de la promoción en el Pregrado en Ingeniería Biomédica",
-      "Beca Vamos Pa'lante durante los semestres 2021-2 y 2022-1 por rendimiento académico destacado",
-      "Formación integral en ingeniería biomédica con enfoque en biotecnología molecular"
+      "Third place among graduates in Biomedical Engineering Bachelor's program",
+      "Vamos Pa'lante Scholarship during semesters 2021-2 and 2022-1 for outstanding academic performance",
+      "Comprehensive training in biomedical engineering with focus on molecular biotechnology"
     ]
   }, {
-    title: "Áreas de Estudio",
+    title: "Study Areas",
     icon: "FlaskConical",
     items: [
-      "Biotecnología Molecular y Celular",
-      "Biomateriales y Nanobiomateriales",
-      "Ingeniería de Tejidos",
-      "Dispositivos Médicos",
-      "Modelado Computacional"
+      "Molecular and Cellular Biotechnology",
+      "Biomaterials and Nanobiomaterials",
+      "Tissue Engineering",
+      "Medical Devices",
+      "Computational Modeling"
     ]
   }],
   achievements: [
-    "Tercer puesto entre graduados de la promoción",
-    "Beca Vamos Pa'lante (2021-2022)",
-    "Formación destacada en ingeniería biomédica"
+    "Third place among graduating class",
+    "Vamos Pa'lante Scholarship (2021-2022)",
+    "Outstanding training in biomedical engineering"
   ],
-  highlights: ["Distinción Académica", "Beca por Mérito"],
+  highlights: ["Academic Distinction", "Merit Scholarship"],
   logo: uniandesLogo,
   ranking: "QS #212"
 }, {
@@ -91,148 +91,148 @@ const events: TimelineEvent[] = [{
   startDate: "2022",
   endDate: "2024",
   type: "education",
-  title: "Maestría en Ingeniería Biomédica",
+  title: "Master's in Biomedical Engineering",
   institution: "Universidad de los Andes",
   location: "Bogotá, Colombia",
-  shortDescription: "Primer puesto entre graduados. Investigación en terapias génicas y nanobiomateriales.",
+  shortDescription: "First place among graduates. Research in gene therapies and nanobiomaterials.",
   fullDescription: [],
   sections: [
     {
-      title: "Logros Académicos",
+      title: "Academic Achievements",
       icon: "GraduationCap",
       items: [
-        "Primer puesto entre los graduados de la promoción en la Maestría en Ingeniería Biomédica",
-        "Beca de asistencia graduada de docencia otorgada por el Departamento de Ingeniería Biomédica",
-        "Investigación enfocada en biotecnología molecular y edición genética"
+        "First place among graduates in Master's in Biomedical Engineering",
+        "Graduate teaching assistantship awarded by the Department of Biomedical Engineering",
+        "Research focused on molecular biotechnology and gene editing"
       ]
     },
     {
-      title: "Investigación Principal",
+      title: "Main Research",
       icon: "FlaskConical",
       items: [
-        "Terapias génicas para enfermedades neurodegenerativas utilizando CRISPR-Cas",
-        "Síntesis y caracterización de nanobiomateriales para aplicaciones biomédicas",
-        "Desarrollo de modelos anatómicos para docencia y capacitación médica",
-        "Diseño de dispositivos médicos innovadores",
-        "Aplicación de técnicas avanzadas de biología molecular"
+        "Gene therapies for neurodegenerative diseases using CRISPR-Cas",
+        "Synthesis and characterization of nanobiomaterials for biomedical applications",
+        "Development of anatomical models for teaching and medical training",
+        "Design of innovative medical devices",
+        "Application of advanced molecular biology techniques"
       ]
     },
     {
-      title: "Publicaciones y Presentaciones",
+      title: "Publications and Presentations",
       icon: "BookOpenCheck",
       items: [
-        "Artículos científicos como primera autora en revistas internacionales",
-        "Tres capítulos de libro como primera autora",
-        "Coautoría en tres artículos adicionales",
-        "Presentaciones en congresos nacionales e internacionales en español e inglés"
+        "Scientific articles as first author in international journals",
+        "Three book chapters as first author",
+        "Co-authorship in three additional articles",
+        "Presentations at national and international conferences in Spanish and English"
       ]
     },
     {
-      title: "Competencias Desarrolladas",
+      title: "Developed Competencies",
       icon: "ClipboardList",
       items: [
-        "Edición genética con sistemas CRISPR-Cas",
-        "Ingeniería de tejidos y cultivo celular",
-        "Síntesis de nanomateriales para aplicaciones biomédicas",
-        "Modelado computacional de sistemas biológicos",
-        "Transferencia tecnológica y gestión de proyectos",
-        "Comunicación científica avanzada"
+        "Gene editing with CRISPR-Cas systems",
+        "Tissue engineering and cell culture",
+        "Synthesis of nanomaterials for biomedical applications",
+        "Computational modeling of biological systems",
+        "Technology transfer and project management",
+        "Advanced scientific communication"
       ]
     }
   ],
   achievements: [
-    "Primer puesto entre graduados de la maestría",
-    "Beca de asistencia graduada de docencia",
-    "Múltiples publicaciones científicas"
+    "First place among master's graduates",
+    "Graduate teaching assistantship",
+    "Multiple scientific publications"
   ],
   logo: uniandesLogo,
   ranking: "QS #212"
 }, {
   id: "research-professional",
   startDate: "Jul 2024",
-  endDate: "Presente",
+  endDate: "Present",
   type: "work",
-  title: "Profesional en Proyectos de Investigación",
+  title: "Research Project Professional",
   institution: "Universidad de los Andes",
-  location: "Departamento de Ingeniería Biomédica",
-  shortDescription: "Transferencia tecnológica y gestión de proyectos con Plastinovo S.A.S.",
+  location: "Department of Biomedical Engineering",
+  shortDescription: "Technology transfer and project management with Plastinovo S.A.S.",
   fullDescription: [],
   sections: [
     {
-      title: "Gestión de Proyectos",
+      title: "Project Management",
       icon: "ClipboardList",
       items: [
-        "Coordinación de proyectos académicos y de investigación en colaboración con Plastinovo S.A.S.",
-        "Participación en programas DESCUBRE e IMPACTA de la Oficina de Transferencia de Tecnología",
-        "Identificación de rutas de salida al mercado para resultados de investigación",
-        "Gestión integral de recursos y cronogramas de proyectos"
+        "Coordination of academic and research projects in collaboration with Plastinovo S.A.S.",
+        "Participation in DESCUBRE and IMPACTA programs from the Technology Transfer Office",
+        "Identification of market exit routes for research results",
+        "Comprehensive management of project resources and timelines"
       ]
     },
     {
-      title: "Investigación Aplicada",
+      title: "Applied Research",
       icon: "FlaskConical",
       items: [
-        "Diseño de modelos anatómicos para docencia y capacitación del personal médico",
-        "Desarrollo de dispositivos médicos innovadores",
-        "Integración de tecnologías avanzadas de fabricación (impresión 3D)",
-        "Validación de prototipos con profesionales de la salud"
+        "Design of anatomical models for teaching and medical personnel training",
+        "Development of innovative medical devices",
+        "Integration of advanced manufacturing technologies (3D printing)",
+        "Prototype validation with healthcare professionals"
       ]
     },
     {
-      title: "Comunicación Científica",
+      title: "Scientific Communication",
       icon: "BookOpenCheck",
       items: [
-        "Presentación de resultados en congresos nacionales e internacionales",
-        "Publicación de artículos científicos como primera autora",
-        "Escritura de capítulos de libro técnicos",
-        "Colaboración en publicaciones como coautora"
+        "Presentation of results at national and international conferences",
+        "Publication of scientific articles as first author",
+        "Writing of technical book chapters",
+        "Collaboration on publications as co-author"
       ]
     }
   ],
-  highlights: ["Transferencia Tecnológica", "Innovación", "Publicaciones"],
+  highlights: ["Technology Transfer", "Innovation", "Publications"],
   logo: uniandesLogo
 }, {
   id: "coatible",
-  startDate: "Ago 2021",
-  endDate: "Presente",
+  startDate: "Aug 2021",
+  endDate: "Present",
   type: "work",
-  title: "Co-fundadora y CTO - Coatible",
+  title: "Co-founder and CTO - Coatible",
   institution: "Universidad de los Andes",
-  location: "Emprendimiento Tecnológico",
-  shortDescription: "Desarrollo de tecnología antiempañamiento para laparoscopios",
+  location: "Technology Entrepreneurship",
+  shortDescription: "Development of anti-fogging technology for laparoscopes",
   fullDescription: [],
   sections: [
     {
-      title: "Desarrollo Tecnológico",
+      title: "Technological Development",
       icon: "FlaskConical",
       items: [
-        "Diseño y desarrollo de película hidrofóbica innovadora para laparoscopios",
-        "Gestión de todas las etapas: diseño técnico, prototipado y validación",
-        "Aplicación de principios de química de superficies y biomateriales",
-        "Optimización de procesos de fabricación"
+        "Design and development of innovative hydrophobic film for laparoscopes",
+        "Management of all stages: technical design, prototyping and validation",
+        "Application of surface chemistry and biomaterials principles",
+        "Manufacturing process optimization"
       ]
     },
     {
-      title: "Reconocimientos",
+      title: "Awards",
       icon: "GraduationCap",
       items: [
-        "Mejor Proyecto 2023-2 del Semillero BITT (Biodiseño, Innovación y Tecnología)",
-        "Tercer Mejor Proyecto en Ciencias de la Vida - Deep Tech 2024 (Mentor-UNAL)",
-        "Reconocimiento por innovación en dispositivos médicos"
+        "Best Project 2023-2 of BITT Seedbed (Biodesign, Innovation and Technology)",
+        "Third Best Project in Life Sciences - Deep Tech 2024 (Mentor-UNAL)",
+        "Recognition for innovation in medical devices"
       ]
     },
     {
-      title: "Competencias Empresariales",
+      title: "Business Competencies",
       icon: "ClipboardList",
       items: [
-        "Liderazgo técnico y gestión de equipos interdisciplinarios",
-        "Desarrollo de modelo de negocio para tecnología médica",
-        "Protección de propiedad intelectual",
-        "Pitch y presentación a inversionistas"
+        "Technical leadership and interdisciplinary team management",
+        "Business model development for medical technology",
+        "Intellectual property protection",
+        "Pitching and presentation to investors"
       ]
     }
   ],
-  highlights: ["Emprendimiento", "Innovación Médica", "Premios"],
+  highlights: ["Entrepreneurship", "Medical Innovation", "Awards"],
   logo: uniandesLogo
 }];
 
@@ -280,10 +280,10 @@ export const AcademicTimeline = () => {
         {/* Header */}
         <div className="text-center space-y-4 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold text-primary">
-            Trayectoria Académica y Profesional
+            Academic and Professional Career
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Formación académica destacada y experiencia en investigación, innovación y transferencia tecnológica
+            Outstanding academic training and experience in research, innovation and technology transfer
           </p>
         </div>
 
@@ -346,7 +346,7 @@ export const AcademicTimeline = () => {
 
                         {/* Call to action */}
                         <div className="pt-2 flex items-center gap-2 text-secondary group-hover:gap-3 transition-all duration-300">
-                          <span className="text-sm font-semibold">Ver detalles</span>
+                          <span className="text-sm font-semibold">View details</span>
                           <ExternalLink className="h-4 w-4" />
                         </div>
                       </CardContent>
