@@ -20,6 +20,7 @@ import pub11Image from "@/assets/pub-11.png";
 import pub12Image from "@/assets/pub-12.png";
 import pub13Image from "@/assets/pub-13.png";
 import pub14Image from "@/assets/pub-14.png";
+import pub15Image from "@/assets/pub-15.png";
 
 interface Publication {
   id: string;
@@ -35,9 +36,25 @@ interface Publication {
 
 const publicationsData: Publication[] = [
   {
+    id: "pub-15",
+    title: "Production and purification of outer membrane vesicles encapsulating green fluorescent protein from Escherichia coli: a step towards scalable OMV technologies",
+    journal: "Frontiers in Bioengineering and Biotechnology, Vol. 12 (Frontiers)",
+    year: 2024,
+    type: "Journal Article",
+    summary:
+      "Outer membrane vesicles (OMVs) are spherical structures that contain a small fraction of the periplasm of Gram-negative bacteria, surrounded by its outer membrane. They are naturally produced and detached from the bacterial surface, participate in diverse biological processes, and their diameter size is in the range of 10–300 nm. OMVs have gained interest in different applications, such as the development of biosensors, vaccines, protein chips, and the encapsulation of heterologous proteins and peptides expressed by these microorganisms. However, the use of OMVs in these applications is limited due to the low yields and high purification costs. In this study, we produced green fluorescent protein (GFP) encapsulated into OMVs using Escherichia coli JC8031 transformed with pTRC99A-ssTorA-GFP to establish the production and purification route. Results showed that the motility of the strain prevents its immobilization in alginate, which hampers the purification of OMVs. To address this issue, a zeolite-based column was used to chromatographically separate the OMVs from smaller particles. Further experiments will be focused on standardizing the production and purification of OMVs at a scalable level.",
+    tags: [
+      "Cellular & Biofabrication Modeling",
+      "Nanomaterials & Polymers",
+      "Physicochemical, Magnetic & Optical Characterization",
+    ],
+    image: pub15Image,
+    link: "https://www.frontiersin.org/journals/bioengineering-and-biotechnology/articles/10.3389/fbioe.2024.1436352/full",
+  },
+  {
     id: "pub-14",
     title: "Assessment of CRISPRa-mediated gdnf overexpression in an In vitro Parkinson's disease model",
-    journal: "TBD",
+    journal: "Frontiers in Bioengineering and Biotechnology, Vol. 12 (Frontiers)",
     year: 2024,
     type: "Journal Article",
     summary:
