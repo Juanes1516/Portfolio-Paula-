@@ -132,31 +132,3 @@ All colors MUST be HSL.
     z-index: 1;
   }
 }
-
-@layer components {
-  /* Timeline Card Responsive Styles */
-  .timeline-card {
-    z-index: 0;
-  }
-
-  /* Desktop: 3-4 columns */
-  @media (min-width: 1440px) {
-    .timeline-card {
-      max-width: 560px;
-    }
-  }
-
-  /* Tablet: 2 columns with smaller gaps */
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .timeline-card {
-      max-width: 100%;
-    }
-  }
-
-  /* Mobile: 1 column with smaller padding */
-  @media (max-width: 430px) {
-    .timeline-card .card-content {
-      padding: 16px !important;
-    }
-  }
-}
