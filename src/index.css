@@ -8,59 +8,59 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 270 40% 8%;
-    --foreground: 270 20% 95%;
+    --background: 0 0% 100%;
+    --foreground: 270 60% 25%;
 
-    --card: 270 35% 12%;
-    --card-foreground: 270 20% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 270 60% 25%;
 
-    --popover: 270 35% 12%;
-    --popover-foreground: 270 20% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 60% 25%;
 
-    --primary: 265 70% 55%;
+    --primary: 265 70% 35%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 280 60% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 270 30% 18%;
-    --muted-foreground: 270 15% 65%;
+    --muted: 270 20% 96%;
+    --muted-foreground: 270 40% 40%;
 
-    --accent: 275 50% 35%;
-    --accent-foreground: 270 20% 95%;
+    --accent: 275 50% 92%;
+    --accent-foreground: 270 60% 25%;
     
     --gold: 35 85% 60%;
-    --gold-foreground: 0 0% 100%;
+    --gold-foreground: 270 60% 25%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 270 30% 22%;
-    --input: 270 30% 22%;
-    --ring: 265 70% 55%;
+    --border: 270 20% 88%;
+    --input: 270 20% 88%;
+    --ring: 265 70% 35%;
 
     --radius: 1rem;
 
     /* Deep dark purple colors */
-    --deep-purple: 265 70% 55%;
-    --lavender: 280 60% 65%;
-    --soft-lavender: 275 50% 35%;
-    --warm-gray: 270 20% 15%;
+    --deep-purple: 265 70% 35%;
+    --lavender: 280 60% 45%;
+    --soft-lavender: 275 50% 92%;
+    --warm-gray: 270 15% 95%;
     
     /* Background motifs */
-    --motif-opacity: 0.08;
+    --motif-opacity: 0.04;
     
-    /* Dark Elegant Gradients */
+    /* Elegant Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(265 70% 35%) 0%, hsl(280 60% 45%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(280 60% 45%) 0%, hsl(275 50% 35%) 100%);
-    --gradient-soft: linear-gradient(180deg, hsl(270 40% 8%) 0%, hsl(275 35% 12%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(265 50% 12%) 0%, hsl(280 45% 10%) 50%, hsl(270 40% 8%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(280 60% 45%) 0%, hsl(275 50% 55%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(275 20% 98%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(265 30% 98%) 0%, hsl(280 25% 97%) 50%, hsl(0 0% 100%) 100%);
     
-    /* Glowing Shadows */
-    --shadow-sm: 0 2px 12px hsl(265 70% 25% / 0.3);
-    --shadow-md: 0 4px 20px hsl(265 70% 25% / 0.4);
-    --shadow-lg: 0 8px 32px hsl(265 70% 25% / 0.5);
-    --shadow-elegant: 0 10px 40px hsl(265 70% 30% / 0.6);
+    /* Soft Shadows */
+    --shadow-sm: 0 2px 12px hsl(265 70% 35% / 0.08);
+    --shadow-md: 0 4px 20px hsl(265 70% 35% / 0.12);
+    --shadow-lg: 0 8px 32px hsl(265 70% 35% / 0.16);
+    --shadow-elegant: 0 10px 40px hsl(265 70% 35% / 0.15);
     
     /* Smooth Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -107,9 +107,9 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     background-image: 
-      radial-gradient(circle at 20% 50%, hsl(265 70% 20% / 0.3) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, hsl(280 60% 25% / 0.25) 0%, transparent 50%),
-      radial-gradient(circle at 40% 90%, hsl(270 65% 22% / 0.2) 0%, transparent 40%);
+      radial-gradient(circle at 20% 50%, hsl(265 50% 95% / 0.5) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, hsl(280 45% 93% / 0.5) 0%, transparent 50%),
+      radial-gradient(circle at 40% 90%, hsl(270 40% 94% / 0.4) 0%, transparent 40%);
     background-attachment: fixed;
   }
   
@@ -122,8 +122,8 @@ All colors MUST be HSL.
     height: 100%;
     pointer-events: none;
     background-image: 
-      repeating-linear-gradient(90deg, hsl(265 50% 30% / 0.05) 0px, transparent 1px, transparent 80px, hsl(265 50% 30% / 0.05) 81px),
-      repeating-linear-gradient(0deg, hsl(280 50% 30% / 0.05) 0px, transparent 1px, transparent 80px, hsl(280 50% 30% / 0.05) 81px);
+      repeating-linear-gradient(90deg, hsl(265 25% 80% / 0.03) 0px, transparent 1px, transparent 80px, hsl(265 25% 80% / 0.03) 81px),
+      repeating-linear-gradient(0deg, hsl(280 25% 80% / 0.03) 0px, transparent 1px, transparent 80px, hsl(280 25% 80% / 0.03) 81px);
     z-index: 0;
   }
   
