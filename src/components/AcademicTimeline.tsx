@@ -1,11 +1,10 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import uniandesLogo from "@/assets/uniandes-logo.png";
-import { GraduationCap, Briefcase, Award, ExternalLink, ChevronLeft, ChevronRight, FlaskConical, BookOpenCheck, ClipboardList } from "lucide-react";
-import useEmblaCarousel from "embla-carousel-react";
+import { GraduationCap, Briefcase, Award, ExternalLink, FlaskConical, BookOpenCheck, ClipboardList } from "lucide-react";
 
 type TimelineItem = 
   | string 
@@ -280,20 +279,7 @@ export const AcademicTimeline = () => {
   const [selectedEvent, setSelectedEvent] = useState<TimelineEvent | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   
-  // Separate and sort events by type
-  const workEvents = events.filter(e => e.type === "work").sort((a, b) => {
-    const yearA = parseInt(a.startDate.match(/\d{4}/)?.[0] || "0");
-    const yearB = parseInt(b.startDate.match(/\d{4}/)?.[0] || "0");
-    return yearA - yearB;
-  });
-  
-  const educationEvents = events.filter(e => e.type === "education").sort((a, b) => {
-    const yearA = parseInt(a.startDate);
-    const yearB = parseInt(b.startDate);
-    return yearA - yearB;
-  });
-  
-  // Merge events chronologically for horizontal display
+  // Sort all events chronologically
   const allEventsSorted = [...events].sort((a, b) => {
     const yearA = parseInt(a.startDate.match(/\d{4}/)?.[0] || "0");
     const yearB = parseInt(b.startDate.match(/\d{4}/)?.[0] || "0");
@@ -310,7 +296,8 @@ export const AcademicTimeline = () => {
     setTimeout(() => setSelectedEvent(null), 300);
   };
 
-  return <section className="min-h-screen bg-gradient-to-b from-accent/5 to-background px-4 sm:px-6 py-20">
+  return (
+    <section className="min-h-screen bg-gradient-to-b from-accent/5 to-background px-4 sm:px-6 py-20">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Header */}
         <div className="text-center space-y-4 animate-fade-in">
@@ -322,195 +309,196 @@ export const AcademicTimeline = () => {
           </p>
         </div>
 
-        {/* Horizontal Timeline */}
-        <div className="relative overflow-x-auto pb-8">
-          <div className="min-w-max px-4 sm:px-8 py-16">
-            {/* Timeline Container */}
-            <div className="relative flex items-center" style={{ minHeight: "700px" }}>
-              {/* Horizontal Timeline Line */}
-              <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-secondary via-accent to-accent -translate-y-1/2" />
+        {/* Timeline Grid */}
+        <div className="w-full">
+          <div 
+            className="grid gap-6 animate-fade-in"
+            style={{
+              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))'
+            }}
+          >
+            {allEventsSorted.map((event, index) => {
+              const isWork = event.type === "work";
+              const Icon = isWork ? Briefcase : GraduationCap;
               
-              {/* Timeline Events */}
-              <div className="flex w-full gap-6 sm:gap-8 lg:gap-12">
-                {allEventsSorted.map((event, index) => {
-                  const isWork = event.type === "work";
-                  const Icon = isWork ? Briefcase : GraduationCap;
-                  
-                  return (
-                    <div 
-                      key={event.id} 
-                      className="relative flex flex-col items-center justify-center animate-fade-in" 
-                      style={{ 
-                        animationDelay: `${index * 150}ms`,
-                        minHeight: "700px",
-                        flex: "0 0 auto"
-                      }}
-                    >
-                      {/* Timeline Dot */}
+              return (
+                <Card 
+                  key={event.id}
+                  className={`timeline-card cursor-pointer transition-all duration-300 border-2 group ${
+                    isWork 
+                      ? 'hover:border-accent bg-gradient-to-br from-accent/5 to-background' 
+                      : 'hover:border-secondary bg-gradient-to-br from-primary/5 to-secondary/5'
+                  }`}
+                  style={{ 
+                    borderRadius: '12px',
+                    boxShadow: '0 2px 10px rgba(0, 0, 0, 0.06)',
+                    maxWidth: '560px',
+                    width: '100%',
+                    animationDelay: `${index * 100}ms`,
+                    marginBottom: '16px',
+                    zIndex: 0
+                  }}
+                  onClick={() => openModal(event)}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.boxShadow = '0 6px 18px rgba(0, 0, 0, 0.10)';
+                    e.currentTarget.style.zIndex = '1';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.06)';
+                    e.currentTarget.style.zIndex = '0';
+                  }}
+                >
+                  <CardContent 
+                    style={{ 
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '12px',
+                      padding: '18px',
+                      overflow: 'visible',
+                      wordBreak: 'break-word',
+                      whiteSpace: 'normal'
+                    }}
+                  >
+                    {/* Logo and Icon Row */}
+                    <div className="flex items-start justify-between gap-3">
+                      {event.logo && (
+                        <img 
+                          src={event.logo} 
+                          alt={`${event.institution} logo`} 
+                          className="h-9 w-auto object-contain flex-shrink-0" 
+                        />
+                      )}
                       <div 
-                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full border-4 border-background shadow-lg z-20 transition-transform hover:scale-125"
-                        style={{ 
-                          backgroundColor: isWork ? 'hsl(var(--accent))' : 'hsl(var(--secondary))'
-                        }}
-                      />
-                      
-                      {/* Connector Line */}
-                      <div 
-                        className="absolute left-1/2 -translate-x-1/2 w-0.5 z-10"
-                        style={{ 
-                          backgroundColor: isWork ? 'hsl(var(--accent) / 0.3)' : 'hsl(var(--secondary) / 0.3)',
-                          height: isWork ? '160px' : '160px',
-                          [isWork ? 'bottom' : 'top']: '50%'
-                        }}
-                      />
-                      
-                      {/* Card - Above timeline for work, below for education */}
-                      <div 
-                        className={`absolute w-80 sm:w-[320px] lg:w-[340px] ${
-                          isWork ? 'bottom-1/2 mb-8' : 'top-1/2 mt-8'
-                        }`}
+                        className={`p-2 rounded-full flex-shrink-0 ${
+                          isWork ? 'bg-accent/10' : 'bg-secondary/10'
+                        } group-hover:scale-110 transition-transform duration-300`}
                       >
-                        <Card 
-                          className={`cursor-pointer transition-all duration-300 hover:-translate-y-1 border-2 group ${
-                            isWork 
-                              ? 'hover:border-accent bg-gradient-to-br from-accent/5 to-background shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_16px_rgba(0,0,0,0.12)]' 
-                              : 'hover:border-secondary bg-gradient-to-br from-primary/5 to-secondary/5 shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_16px_rgba(0,0,0,0.12)]'
-                          }`}
-                          style={{ 
-                            borderRadius: '12px',
-                            minHeight: 'fit-content'
-                          }}
-                          onClick={() => openModal(event)}
-                        >
-                          <CardContent className="p-5 sm:p-6 space-y-3">
-                            {/* Logo and Icon Row */}
-                            <div className="flex items-start justify-between gap-3">
-                              {event.logo && (
-                                <img 
-                                  src={event.logo} 
-                                  alt={`${event.institution} logo`} 
-                                  className="h-9 w-auto object-contain flex-shrink-0" 
-                                />
-                              )}
-                              <div 
-                                className={`p-2 rounded-full flex-shrink-0 ${
-                                  isWork ? 'bg-accent/10' : 'bg-secondary/10'
-                                } group-hover:scale-110 transition-transform duration-300`}
-                              >
-                                <Icon className={`h-4 w-4 ${isWork ? 'text-accent' : 'text-secondary'}`} />
-                              </div>
-                            </div>
-
-                            {/* Date Badge */}
-                            <Badge 
-                              className="w-fit text-white text-xs px-3 py-1"
-                              style={{ 
-                                background: isWork 
-                                  ? 'linear-gradient(to right, hsl(var(--accent)), hsl(var(--accent) / 0.7))' 
-                                  : 'linear-gradient(to right, hsl(var(--secondary)), hsl(var(--accent)))',
-                                fontWeight: 500
-                              }}
-                            >
-                              {event.startDate} – {event.endDate}
-                            </Badge>
-
-                            {/* Content */}
-                            <div className="space-y-2">
-                              <h4 
-                                className={`font-bold leading-tight transition-colors duration-300 ${
-                                  isWork ? 'text-primary group-hover:text-accent' : 'text-primary group-hover:text-secondary'
-                                }`}
-                                style={{
-                                  fontSize: '1.1rem',
-                                  wordWrap: 'break-word',
-                                  whiteSpace: 'normal',
-                                  lineHeight: '1.3'
-                                }}
-                              >
-                                {event.title}
-                              </h4>
-                              
-                              <p 
-                                className="font-medium text-foreground/80"
-                                style={{
-                                  fontSize: '0.9rem',
-                                  wordWrap: 'break-word',
-                                  whiteSpace: 'normal',
-                                  lineHeight: '1.4',
-                                  color: '#4C4C4C'
-                                }}
-                              >
-                                {event.institution}
-                              </p>
-                              
-                              {event.ranking && (
-                                <Badge 
-                                  variant="outline" 
-                                  className="border-secondary/50 text-secondary"
-                                  style={{ fontSize: '0.75rem' }}
-                                >
-                                  {event.ranking}
-                                </Badge>
-                              )}
-                              
-                              <p 
-                                className="text-muted-foreground"
-                                style={{
-                                  fontSize: '0.9rem',
-                                  lineHeight: '1.4',
-                                  wordWrap: 'break-word',
-                                  whiteSpace: 'normal',
-                                  color: '#666'
-                                }}
-                              >
-                                {event.shortDescription}
-                              </p>
-                            </div>
-
-                            {/* Highlights */}
-                            {event.highlights && event.highlights.length > 0 && (
-                              <div className="flex flex-wrap gap-1.5 mt-3">
-                                {event.highlights.slice(0, 3).map(highlight => (
-                                  <Badge 
-                                    key={highlight} 
-                                    variant="outline" 
-                                    className={`${
-                                      isWork ? 'border-accent/40 text-accent bg-accent/5' : 'border-secondary/40 text-secondary bg-secondary/5'
-                                    }`}
-                                    style={{
-                                      fontSize: '0.8rem',
-                                      padding: '0.25rem 0.5rem'
-                                    }}
-                                  >
-                                    {highlight}
-                                  </Badge>
-                                ))}
-                              </div>
-                            )}
-
-                            {/* Call to action */}
-                            <div 
-                              className={`pt-2 flex items-center gap-2 ${
-                                isWork ? 'text-accent' : 'text-secondary'
-                              } group-hover:gap-3 transition-all duration-300`}
-                              style={{ fontSize: '0.8rem', fontWeight: 600 }}
-                            >
-                              <span>View details</span>
-                              <ExternalLink className="h-3 w-3" />
-                            </div>
-                          </CardContent>
-                        </Card>
+                        <Icon className={`h-4 w-4 ${isWork ? 'text-accent' : 'text-secondary'}`} />
                       </div>
                     </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-          
-          {/* Scroll Hint */}
-          <div className="text-center mt-6 text-sm text-muted-foreground font-medium">
-            ← Scroll horizontally to view full timeline →
+
+                    {/* Date Badge */}
+                    <Badge 
+                      className="w-fit text-white px-3 py-1"
+                      style={{ 
+                        background: isWork 
+                          ? 'linear-gradient(to right, hsl(var(--accent)), hsl(var(--accent) / 0.7))' 
+                          : 'linear-gradient(to right, hsl(var(--secondary)), hsl(var(--accent)))',
+                        fontWeight: 500,
+                        fontSize: '0.75rem'
+                      }}
+                    >
+                      {event.startDate} – {event.endDate}
+                    </Badge>
+
+                    {/* Title */}
+                    <h4 
+                      className={`font-extrabold leading-tight transition-colors duration-300 ${
+                        isWork ? 'text-primary group-hover:text-accent' : 'text-primary group-hover:text-secondary'
+                      }`}
+                      style={{
+                        fontSize: 'clamp(1.05rem, 1.2vw, 1.25rem)',
+                        wordBreak: 'break-word',
+                        whiteSpace: 'normal',
+                        lineHeight: '1.3',
+                        overflow: 'visible'
+                      }}
+                    >
+                      {event.title}
+                    </h4>
+                    
+                    {/* Institution */}
+                    <p 
+                      className="font-semibold"
+                      style={{
+                        fontSize: '0.95rem',
+                        wordBreak: 'break-word',
+                        whiteSpace: 'normal',
+                        lineHeight: '1.4',
+                        color: '#4b4b4b',
+                        overflow: 'visible'
+                      }}
+                    >
+                      {event.institution}
+                    </p>
+
+                    {/* Ranking Badge */}
+                    {event.ranking && (
+                      <Badge 
+                        variant="outline" 
+                        className="w-fit border-secondary/50 text-secondary"
+                        style={{ fontSize: '0.75rem' }}
+                      >
+                        {event.ranking}
+                      </Badge>
+                    )}
+                    
+                    {/* Description */}
+                    <p 
+                      className="text-muted-foreground"
+                      style={{
+                        fontSize: '0.95rem',
+                        lineHeight: '1.5',
+                        color: '#5a5a5a',
+                        wordBreak: 'break-word',
+                        whiteSpace: 'normal',
+                        overflow: 'visible'
+                      }}
+                    >
+                      {event.shortDescription}
+                    </p>
+
+                    {/* Tags/Highlights */}
+                    {event.highlights && event.highlights.length > 0 && (
+                      <div 
+                        style={{ 
+                          display: 'flex',
+                          flexWrap: 'wrap',
+                          gap: '8px',
+                          marginTop: '8px',
+                          overflow: 'visible'
+                        }}
+                      >
+                        {event.highlights.map((highlight, i) => (
+                          <Badge 
+                            key={i}
+                            variant="secondary"
+                            style={{
+                              fontSize: '0.8rem',
+                              backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                              color: '#666',
+                              padding: '4px 10px',
+                              minHeight: '40px',
+                              display: 'inline-flex',
+                              alignItems: 'center'
+                            }}
+                          >
+                            {highlight}
+                          </Badge>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Call to action */}
+                    <div 
+                      className={`flex items-center gap-2 ${
+                        isWork ? 'text-accent' : 'text-secondary'
+                      } group-hover:gap-3 transition-all duration-300`}
+                      style={{ 
+                        fontSize: '0.8rem', 
+                        fontWeight: 600,
+                        marginTop: '4px'
+                      }}
+                    >
+                      <span>View details</span>
+                      <ExternalLink className="h-3 w-3" />
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -518,10 +506,17 @@ export const AcademicTimeline = () => {
       {/* Detailed Modal */}
       <Dialog open={isModalOpen} onOpenChange={closeModal}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-          {selectedEvent && <>
+          {selectedEvent && (
+            <>
               <DialogHeader>
                 <div className="flex items-start gap-4">
-                  {selectedEvent.logo && <img src={selectedEvent.logo} alt={`${selectedEvent.institution} logo`} className="h-16 w-auto object-contain" />}
+                  {selectedEvent.logo && (
+                    <img 
+                      src={selectedEvent.logo} 
+                      alt={`${selectedEvent.institution} logo`} 
+                      className="h-16 w-auto object-contain" 
+                    />
+                  )}
                   <div className="flex-1 space-y-2">
                     <DialogTitle className="text-2xl text-primary">
                       {selectedEvent.title}
@@ -533,9 +528,11 @@ export const AcademicTimeline = () => {
                       <Badge variant="secondary" className="bg-gradient-to-r from-secondary to-accent text-white">
                         {selectedEvent.startDate} – {selectedEvent.endDate}
                       </Badge>
-                      {selectedEvent.ranking && <Badge variant="outline" className="border-secondary/50 text-secondary">
+                      {selectedEvent.ranking && (
+                        <Badge variant="outline" className="border-secondary/50 text-secondary">
                           {selectedEvent.ranking}
-                        </Badge>}
+                        </Badge>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -544,8 +541,9 @@ export const AcademicTimeline = () => {
               <div className="space-y-6 pt-4">
                 {/* Sections */}
                 {selectedEvent.sections && selectedEvent.sections.map(section => {
-              const SectionIcon = SectionIconMap[section.icon];
-              return <div key={section.title} className="space-y-3">
+                  const SectionIcon = SectionIconMap[section.icon];
+                  return (
+                    <div key={section.title} className="space-y-3">
                       <div className="flex items-center gap-2">
                         <SectionIcon className="h-5 w-5 text-secondary" />
                         <h4 className="text-lg font-bold text-primary">
@@ -553,30 +551,55 @@ export const AcademicTimeline = () => {
                         </h4>
                       </div>
                       <ul className="space-y-2 pl-7">
-                        {section.items.map((item, idx) => <li key={idx} className="flex items-start gap-2 text-muted-foreground">
+                        {section.items.map((item, idx) => (
+                          <li key={idx} className="flex items-start gap-2 text-muted-foreground">
                             <span className="text-secondary mt-1.5">•</span>
                             <span>
-                              {typeof item === "string" ? item : <>
+                              {typeof item === "string" ? (
+                                item
+                              ) : (
+                                <>
                                   {item.text}
-                                  {item.link && <a href={item.link.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 ml-2 text-secondary hover:underline">
+                                  {item.link && (
+                                    <a 
+                                      href={item.link.url} 
+                                      target="_blank" 
+                                      rel="noopener noreferrer" 
+                                      className="inline-flex items-center gap-1 ml-2 text-secondary hover:underline"
+                                    >
                                       {item.link.label}
                                       <ExternalLink className="h-3 w-3" />
-                                    </a>}
-                                </>}
+                                    </a>
+                                  )}
+                                </>
+                              )}
                             </span>
-                          </li>)}
+                          </li>
+                        ))}
                       </ul>
-                      {section.links && section.links.length > 0 && <div className="pl-7 flex flex-wrap gap-2">
-                          {section.links.map(link => <Button key={link.url} variant="outline" size="sm" onClick={() => window.open(link.url, "_blank")} className="text-xs">
+                      {section.links && section.links.length > 0 && (
+                        <div className="pl-7 flex flex-wrap gap-2">
+                          {section.links.map(link => (
+                            <Button 
+                              key={link.url}
+                              variant="outline" 
+                              size="sm" 
+                              onClick={() => window.open(link.url, "_blank")} 
+                              className="text-xs"
+                            >
                               {link.label}
                               <ExternalLink className="h-3 w-3 ml-1" />
-                            </Button>)}
-                        </div>}
-                    </div>;
-            })}
+                            </Button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
 
                 {/* Achievements */}
-                {selectedEvent.achievements && selectedEvent.achievements.length > 0 && <div className="space-y-3 pt-4 border-t">
+                {selectedEvent.achievements && selectedEvent.achievements.length > 0 && (
+                  <div className="space-y-3 pt-4 border-t">
                     <div className="flex items-center gap-2">
                       <Award className="h-5 w-5 text-secondary" />
                       <h4 className="text-lg font-bold text-primary">
@@ -584,23 +607,37 @@ export const AcademicTimeline = () => {
                       </h4>
                     </div>
                     <ul className="space-y-2 pl-7">
-                      {selectedEvent.achievements.map((achievement, idx) => <li key={idx} className="flex items-start gap-2 text-muted-foreground">
+                      {selectedEvent.achievements.map((achievement, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-muted-foreground">
                           <span className="text-secondary mt-1.5">•</span>
                           <span>{achievement}</span>
-                        </li>)}
+                        </li>
+                      ))}
                     </ul>
-                  </div>}
+                  </div>
+                )}
 
                 {/* External Links */}
-                {selectedEvent.links && selectedEvent.links.length > 0 && <div className="flex flex-wrap gap-2 pt-4">
-                    {selectedEvent.links.map(link => <Button key={link.url} variant="default" onClick={() => window.open(link.url, "_blank")} className="bg-secondary hover:bg-secondary/90">
+                {selectedEvent.links && selectedEvent.links.length > 0 && (
+                  <div className="flex flex-wrap gap-2 pt-4">
+                    {selectedEvent.links.map(link => (
+                      <Button 
+                        key={link.url}
+                        variant="default" 
+                        onClick={() => window.open(link.url, "_blank")} 
+                        className="bg-secondary hover:bg-secondary/90"
+                      >
                         {link.label}
                         <ExternalLink className="h-4 w-4 ml-2" />
-                      </Button>)}
-                  </div>}
+                      </Button>
+                    ))}
+                  </div>
+                )}
               </div>
-            </>}
+            </>
+          )}
         </DialogContent>
       </Dialog>
-    </section>;
+    </section>
+  );
 };
