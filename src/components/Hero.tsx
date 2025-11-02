@@ -39,15 +39,7 @@ export const Hero = () => {
           </div>
 
           <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            I am a Biomedical Engineer and Master in Biomedical Engineering with experience in{" "}
-            <span className="text-primary font-semibold">molecular biotechnology, CRISPR-Cas gene editing, and medical device development</span>.{" "}
-            My approach integrates technology transfer with academic innovation, collaborating with private entities and programs such as{" "}
-            <span className="text-primary font-semibold">DESCUBRE and IMPACTA</span> to bring research to market. 
-            I have strong analytical skills, academic project management, and effective communication in Spanish and English. 
-            My motivation lies in generating{" "}
-            <span className="text-primary font-semibold">impact from the university</span>, contributing to innovation and entrepreneurship 
-            based on science and technology, especially in{" "}
-            <span className="text-primary font-semibold">tissue engineering, gene therapies, and nanobiomaterials</span>.
+            I am a <span className="text-primary font-semibold">Biomedical Engineer with a Master's degree in Biomedical Engineering</span>, specializing in gene therapy and nanotechnology. My research focuses on the development of <span className="text-primary font-semibold">nanostructured delivery systems for therapeutic applications</span>, particularly in gene editing and regenerative medicine. I have contributed to the design, synthesis, and characterization of biomaterials for targeted drug and gene delivery, leveraging nanotechnology to enhance cellular uptake, transfection efficiency, and therapeutic efficacy. My work bridges fundamental research and translational applications, advancing innovation in <span className="text-primary font-semibold">biomedical engineering, nanomedicine, and gene therapy</span>. Through leading interdisciplinary teams and managing complex research projects, I have cultivated strong skills in scientific communication, data analysis, and academic project management, fostering effective collaboration between academic and industrial partners toward impactful biomedical innovation.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
