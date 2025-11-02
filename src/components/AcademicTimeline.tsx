@@ -326,7 +326,7 @@ export const AcademicTimeline = () => {
         <div className="relative overflow-x-auto pb-8">
           <div className="min-w-max px-8">
             {/* Horizontal Timeline Line */}
-            <div className="relative h-96 flex items-center">
+            <div className="relative min-h-[600px] flex items-center py-12">
               <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-secondary via-accent to-accent" />
               
               {/* Timeline Events */}
@@ -338,23 +338,23 @@ export const AcademicTimeline = () => {
                   
                   return (
                     <div key={event.id} className="relative flex flex-col items-center" style={{ animationDelay: `${index * 100}ms` }}>
-                      {/* Timeline Dot */}
-                      <div className={`absolute top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-${colorClass} border-4 border-background shadow-lg z-10`} 
-                           style={{ 
-                             backgroundColor: isWork ? 'hsl(var(--accent))' : 'hsl(var(--secondary))'
-                           }} 
-                      />
-                      
                       {/* Connector Line */}
                       <div 
-                        className={`absolute top-1/2 w-1 ${isWork ? '-translate-y-full h-20' : 'h-20'}`}
+                        className={`absolute top-1/2 w-1 ${isWork ? '-translate-y-full h-32' : 'h-32'} z-0`}
                         style={{ 
                           backgroundColor: isWork ? 'hsl(var(--accent) / 0.3)' : 'hsl(var(--secondary) / 0.3)'
                         }}
                       />
                       
+                      {/* Timeline Dot */}
+                      <div className={`absolute top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-${colorClass} border-4 border-background shadow-lg z-0`} 
+                           style={{ 
+                             backgroundColor: isWork ? 'hsl(var(--accent))' : 'hsl(var(--secondary))'
+                           }} 
+                      />
+                      
                       {/* Card */}
-                      <div className={`${isWork ? 'mb-auto pb-24' : 'mt-auto pt-24'} w-72`}>
+                      <div className={`${isWork ? 'mb-auto pb-36' : 'mt-auto pt-36'} w-72 relative z-10`}>
                         <Card 
                           className={`cursor-pointer transition-all duration-300 hover:shadow-2xl border-2 ${
                             isWork 
