@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import uniandesLogo from "@/assets/uniandes-logo.png";
+import ecosistemaLogo from "@/assets/ecosistema-logo.png";
 import { GraduationCap, Briefcase, Award, ExternalLink, ChevronLeft, ChevronRight, FlaskConical, BookOpenCheck, ClipboardList } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 
@@ -83,7 +84,7 @@ const events: TimelineEvent[] = [
       }
     ],
     highlights: ["Technology Transfer", "$5M Grants", "Industry Partnerships"],
-    logo: uniandesLogo
+    logo: ecosistemaLogo
   },
   {
     id: "research-professional",
