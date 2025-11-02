@@ -9,16 +9,9 @@ import Autoplay from "embla-carousel-autoplay";
 import pub1Image from "@/assets/pub-1.png";
 import pub2Image from "@/assets/pub-2.png";
 import pub3Image from "@/assets/pub-3.png";
-import pub4Image from "@/assets/pub-4.png";
-import pub5Image from "@/assets/pub-5.png";
 import pub6Image from "@/assets/pub-6.png";
 import pub7Image from "@/assets/pub-7.png";
-import pub8Image from "@/assets/pub-8.png";
-import pub9Image from "@/assets/pub-9.png";
-import pub10Image from "@/assets/pub-10.png";
 import pub11Image from "@/assets/pub-11.png";
-import pub12Image from "@/assets/pub-12.png";
-import pub13Image from "@/assets/pub-13.png";
 import pub14Image from "@/assets/pub-14.png";
 import pub15Image from "@/assets/pub-15.png";
 
@@ -120,44 +113,6 @@ const publicationsData: Publication[] = [
     link: "https://www.mdpi.com/2624-845X/6/2/10",
   },
   {
-    id: "pub-4",
-    title:
-      "Design, characterization, and evaluation of textile systems and coatings for sports use: applications in the design of High-Thermal comfort wearables",
-    journal: "ACS Omega, Vol. 9, No. 50, pp. 49143-49162 (ACS)",
-    year: 2024,
-    type: "Journal Article",
-    summary:
-      "Exposure to high temperatures during indoor and outdoor activities increases the risk of heat-related illness such as cramps, rashes, and heatstroke (HS). Fatal cases of HS are ten times more common than serious cardiac episodes in sporting scenarios, with untreated cases leading to mortality rates as high as 80%. Enhancing thermal comfort can be achieved through heat loss in enclosed spaces and the human body, utilizing heat transfer mechanisms such as radiation, conduction, convection, and evaporation, which do not require initial energy input. Among these, two primary mechanisms are commonly employed in the textile industry to enhance passive cooling: radiation and conduction. The radiation approach encompasses two aspects: (1) reflecting solar spectrum (SS) wavelengths and (2) transmitting and emitting in the atmospheric window (AW). ",
-    tags: [
-      "Mathematical & Computational Modeling",
-      "Multiphysics Modeling (Mechanical / Thermal / Electrical / Mass Transport)",
-      "Cellular & Biofabrication Modeling",
-      "Nanomaterials & Polymers",
-      "Physicochemical, Magnetic & Optical Characterization",
-    ],
-    image: pub4Image,
-    link: "https://pubs.acs.org/doi/full/10.1021/acsomega.4c05600",
-  },
-  {
-    id: "pub-5",
-    title:
-      "Redefining vascular repair: revealing cellular responses on PEUU—gelatin electrospun vascular grafts for endothelialization and immune responses on in vitro models",
-    journal: "Frontiers in Bioengineering and Biotechnology, Vol. 12 (Frontiers)",
-    year: 2024,
-    type: "Journal Article",
-    summary:
-      "Tissue-engineered vascular grafts (TEVGs) poised for regenerative applications are central to effective vascular repair, with their efficacy being significantly influenced by scaffold architecture and the strategic distribution of bioactive molecules either embedded within the scaffold or elicited from responsive tissues. Despite substantial advancements over recent decades, a thorough understanding of the critical cellular dynamics for clinical success remains to be fully elucidated. Graft failure, often ascribed to thrombogenesis, intimal hyperplasia, or calcification, is predominantly linked to improperly modulated inflammatory reactions. The orchestrated behavior of repopulating cells is crucial for both initial endothelialization and the subsequent differentiation of vascular wall stem cells into functional phenotypes. This necessitates the TEVG to provide an optimal milieu wherein immune cells can promote early angiogenesis and cell recruitment, all while averting persistent inflammation. In this study, we present an innovative TEVG designed to enhance cellular responses by integrating a physicochemical gradient through a multilayered structure utilizing synthetic (poly (ester urethane urea), PEUU) and natural polymers (Gelatin B), thereby modulating inflammatory reactions. The luminal surface is functionalized with a four-arm polyethylene glycol (P4A) to mitigate thrombogenesis, while the incorporation of adhesive peptides (RGD/SV) fosters the adhesion and maturation of functional endothelial cells.",
-    tags: [
-      "Mathematical & Computational Modeling",
-      "Multiphysics Modeling (Mechanical / Thermal / Electrical / Mass Transport)",
-      "Cellular & Biofabrication Modeling",
-      "Nanomaterials & Polymers",
-      "Physicochemical, Magnetic & Optical Characterization",
-    ],
-    image: pub5Image,
-    link: "https://www.frontiersin.org/journals/bioengineering-and-biotechnology/articles/10.3389/fbioe.2024.1410863/full",
-  },
-  {
     id: "pub-6",
     title:
       "Zweifach–fung microfluidic device for efficient microparticle separation: cost-effective fabrication using CO2 laser-ablated PMMA",
@@ -198,47 +153,6 @@ const publicationsData: Publication[] = [
     link: "https://www.mdpi.com/2072-666X/15/8/1057",
   },
   {
-    id: "pub-8",
-    title: "The impact of yeast encapsulation in wort fermentation and beer flavor profile",
-    journal: "Polymers, Vol. 15, No. 7, p. 1742 (MDPI)",
-    year: 2023,
-    type: "Journal Article",
-    summary:
-      "The food and beverage industry is constantly evolving, and consumers are increasingly searching for premium products that not only offer health benefits but a pleasant taste. A viable strategy to accomplish this is through the altering of sensory profiles through encapsulation of compounds with unique flavors. We used this approach here to examine how brewing in the presence of yeast cells encapsulated in alginate affected the sensory profile of beer wort. Initial tests were conducted for various combinations of sodium alginate and calcium chloride concentrations. Mechanical properties (i.e., breaking force and elasticity) and stability of the encapsulates were then considered to select the most reliable encapsulating formulation to conduct the corresponding alcoholic fermentations. Yeast cells were then encapsulated using 3% (w/v) alginate and 0.1 M calcium chloride as a reticulating agent. Fourteen-day fermentations with this encapsulating formulation involved a Pilsen malt-based wort and four S. cerevisiae strains, three commercially available and one locally isolated. The obtained beer was aged in an amber glass container for two weeks at 4 °C. The color, turbidity, taste, and flavor profile were measured and compared to similar commercially available products. Cell growth was monitored concurrently with fermentation, and the concentrations of ethanol, sugars, and organic acids in the samples were determined via high-performance liquid chromatography (HPLC). It was observed that encapsulation caused significant differences in the sensory profile between strains, as evidenced by marked changes in the astringency, geraniol, and capric acid aroma production. Three repeated batch experiments under the same conditions revealed that cell viability and mechanical properties decreased substantially, which might limit the reusability of encapsulates. In terms of ethanol production and substrate consumption, it was also observed that encapsulation improved the performance of the locally isolated strain.",
-    tags: [
-      "Mathematical & Computational Modeling",
-      "Multiphysics Modeling (Mechanical / Thermal / Electrical / Mass Transport)",
-      "Cellular & Biofabrication Modeling",
-      "Nanomaterials & Polymers",
-      "Physicochemical, Magnetic & Optical Characterization",
-    ],
-    image: pub8Image,
-    link: "https://www.mdpi.com/2073-4360/15/7/1742",
-  },
-  {
-    id: "pub-9",
-    title: "Breaking the clean room barrier: exploring low-cost alternatives for microfluidic devices",
-    journal: "Frontiers in Bioengineering and Biotechnology, Vol. 11 (Frontiers)",
-    year: 2023,
-    type: "Review Article",
-    summary:
-      "Microfluidics is an interdisciplinary field that encompasses both science and engineering, which aims to design and fabricate devices capable of manipulating extremely low volumes of fluids on a microscale level. The central objective of microfluidics is to provide high precision and accuracy while using minimal reagents and equipment. The benefits of this approach include greater control over experimental conditions, faster analysis, and improved experimental reproducibility. Microfluidic devices, also known as labs-on-a-chip (LOCs), have emerged as potential instruments for optimizing operations and decreasing costs in various of industries, including pharmaceutical, medical, food, and cosmetics. However, the high price of conventional prototypes for LOCs devices, generated in clean room facilities, has increased the demand for inexpensive alternatives. Polymers, paper, and hydrogels are some of the materials that can be utilized to create the inexpensive microfluidic devices covered in this article. In addition, we highlighted different manufacturing techniques, such as soft lithography, laser plotting, and 3D printing, that are suitable for creating LOCs. The selection of materials and fabrication techniques will depend on the specific requirements and applications of each individual LOC. This article aims to provide a comprehensive overview of the numerous alternatives for the development of low-cost LOCs to service industries such as pharmaceuticals, chemicals, food, and biomedicine.",
-    tags: ["Microfluidic"],
-    image: pub9Image,
-    link: "https://www.frontiersin.org/journals/bioengineering-and-biotechnology/articles/10.3389/fbioe.2023.1176557/full",
-  },
-  {
-    id: "pub-10",
-    title: "Critique–Simulation Apps",
-    journal: "Education for Chemical Engineers, Vol. 42, pp. 88-89 (Elsevier)",
-    year: 2023,
-    type: "Journal Article",
-    summary: "This critique discusses the simulation App of a bioreactor (Sartorius D-DCU 100 L) for cell culture, which was included in the article Laboratory-independent exploration of stirred bioreactors and their fluid dynamics by Stefan Seidel et al., Education for Chemical Engineers,.",
-    tags: ["Mathematical & Computational Modeling"],
-    image: pub10Image,
-    link: "https://doi.org/10.1016/j.ece.2022.11.001",
-  },
-  {
     id: "pub-11",
     title:
       "Low-cost inertial microfluidic device for microparticle separation: A laser-Ablated PMMA lab-on-a-chip approach without a cleanroom",
@@ -255,45 +169,6 @@ const publicationsData: Publication[] = [
     ],
     image: pub11Image,
     link: "https://www.sciencedirect.com/science/article/pii/S2468067223001001",
-  },
-  {
-    id: "pub-12",
-    title:
-      "Magnetic torus microreactor as a novel device for sample treatment via solid-phase microextraction coupled to graphite furnace atomic absorption spectroscopy: A route for arsenic pre-concentration",
-    journal: "Molecules, Vol. 27, No. 19, p. 6198 (MDPI)",
-    year: 2022,
-    type: "Journal Article",
-    summary:
-      "This work studied the feasibility of using a novel microreactor based on torus geometry to carry out a sample pretreatment before its analysis by graphite furnace atomic absorption. The miniaturized retention of total arsenic was performed on the surface of a magnetic sorbent material consisting of 6 mg of magnetite (Fe3O4) confined in a very small space inside (20.1 µL) a polyacrylate device filling an internal lumen (inside space). Using this geometric design, a simulation theoretical study demonstrated a notable improvement in the analyte adsorption process on the solid extractant surface. Compared to single-layer geometries, the torus microreactor geometry brought on flow turbulence within the liquid along the curvatures inside the device channels, improving the efficiency of analyte–extractant contact and therefore leading to a high preconcentration factor. According to this design, the magnetic solid phase was held internally as a surface bed with the use of an 8 mm-diameter cylindric neodymium magnet, allowing the pass of a fixed volume of an arsenic aqueous standard solution. A preconcentration factor of up to 60 was found to reduce the typical “characteristic mass” (as sensitivity parameter) determined by direct measurement from 53.66 pg to 0.88 pg, showing an essential improvement in the arsenic signal sensitivity by absorption atomic spectrometry. This methodology emulates a miniaturized micro-solid-phase extraction system for flow-through water pretreatment samples in chemical analysis before coupling to techniques that employ reduced sample volumes, such as graphite furnace atomic absorption spectroscopy.",
-    tags: [
-      "Mathematical & Computational Modeling",
-      "Fluid & Particle Dynamics (CFD / Microfluidics / Particle Tracing)",
-      "Magnetic & Field-Driven Systems",
-      "Nanomaterials & Polymers",
-      "Physicochemical, Magnetic & Optical Characterization",
-      "Microfluidic",
-    ],
-    image: pub12Image,
-    link: "https://www.mdpi.com/1420-3049/27/19/6198",
-  },
-  {
-    id: "pub-13",
-    title: "In silico study of spheroids fusion through magnetic field gradients",
-    journal:
-      "2021 IEEE 2nd international congress of biomedical engineering and bioengineering (CI-IB&BI), pp. 1-9 (IEEE)",
-    year: 2021,
-    type: "Conference Paper",
-    summary:
-      "Performed in silico simulations of spheroid fusion under magnetic gradients, integrating cellular, field, and interface-level modeling to predict fusion dynamics.",
-    tags: [
-      "Mathematical & Computational Modeling",
-      "Fluid & Particle Dynamics (CFD / Microfluidics / Particle Tracing)",
-      "Magnetic & Field-Driven Systems",
-      "Interface & Phase Modeling (Phase Field / Level Set)",
-      "Cellular & Biofabrication Modeling",
-    ],
-    image: pub13Image,
-    link: "https://ieeexplore.ieee.org/document/9626089",
   },
 ];
 
