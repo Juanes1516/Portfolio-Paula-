@@ -49,7 +49,7 @@ const publicationsData: Publication[] = [
       "Physicochemical, Magnetic & Optical Characterization",
     ],
     image: pub14Image,
-    link: "#",
+    link: "https://www.frontiersin.org/journals/bioengineering-and-biotechnology/articles/10.3389/fbioe.2024.1420183/full",
   },
   {
     id: "pub-1",
