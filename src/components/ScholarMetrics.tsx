@@ -52,7 +52,7 @@ const CustomTooltip = ({ active, payload }: any) => {
 };
 
 export const ScholarMetrics = ({
-  publications = 8,
+  publications = 10,
   citations = 62,
   hIndex = 4,
   i10Index = 2,
