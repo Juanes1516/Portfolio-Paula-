@@ -9,7 +9,7 @@ import Autoplay from "embla-carousel-autoplay";
 import pub1Image from "@/assets/pub-1.png";
 import pub2Image from "@/assets/pub-2.png";
 import pub3Image from "@/assets/pub-3.png";
-import pub6Image from "@/assets/pub-6.png";
+
 import pub7Image from "@/assets/pub-7.png";
 import pub11Image from "@/assets/pub-11.png";
 import pub14Image from "@/assets/pub-14.png";
@@ -75,16 +75,6 @@ const publicationsData: Publication[] = [{
   tags: ["Nanomaterials & Polymers", "Physicochemical, Magnetic & Optical Characterization"],
   image: pub3Image,
   link: "https://www.mdpi.com/2624-845X/6/2/10"
-}, {
-  id: "pub-6",
-  title: "Zweifach–fung microfluidic device for efficient microparticle separation: cost-effective fabrication using CO2 laser-ablated PMMA",
-  journal: "Micromachines, Vol. 15, No. 7, p. 932 (MDPI)",
-  year: 2024,
-  type: "Journal Article",
-  summary: "Microfluidic separators play a pivotal role in the biomedical and chemical industries by enabling precise fluid manipulations. Traditional fabrication of these devices typically requires costly cleanroom facilities, which limits their broader application. This study introduces a novel microfluidic device that leverages the passive Zweifach–Fung principle to overcome these financial barriers. Through Lagrangian computational simulations, we optimized an eleven-channel Zweifach–Fung configuration that achieved a perfect 100% recall rate for particles following a specified normal distribution. Experimental evaluations determined 2 mL/h as the optimal total flow rate (TFR), under which the device showcased exceptional performance enhancements in precision and recall for micrometer-sized particles, achieving an overall accuracy of 94% ± 3%. Fabricated using a cost-effective, non-cleanroom method, this approach represents a significant shift from conventional practices, dramatically reducing production costs while maintaining high operational efficacy. The cost of each chip is less than USD 0.90 cents and the manufacturing process takes only 15 min. The development of this device not only makes microfluidic technology more accessible but also sets a new standard for future advancements in the field",
-  tags: ["Mathematical & Computational Modeling", "Fluid & Particle Dynamics (CFD / Microfluidics / Particle Tracing)", "Magnetic & Field-Driven Systems", "Nanomaterials & Polymers", "Physicochemical, Magnetic & Optical Characterization", "Microfluidic"],
-  image: pub6Image,
-  link: "https://www.mdpi.com/2072-666X/15/7/932"
 }, {
   id: "pub-7",
   title: "Enhancing magnetic micro-and nanoparticle separation with a cost-effective microfluidic device fabricated by laser ablation of PMMA",
