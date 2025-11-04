@@ -123,8 +123,7 @@ export const Publications = () => {
             <h2 className="text-4xl font-bold">Peer-Reviewed Publications & Research Highlights</h2>
           </div>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            Scientific contributions across modeling, nanomaterials, and AI-driven biomedical engineering, integrating
-            in-silico and experimental approaches.
+            Research focused on nanostructured delivery systems for gene therapy and regenerative medicine, bridging fundamental research with translational applications in nanomedicine. Advancing innovation through targeted drug and gene delivery platforms that enhance therapeutic efficacy and cellular uptake.
           </p>
         </div>
 
