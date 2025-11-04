@@ -64,7 +64,7 @@ export const BookChapters = () => {
   const [selectedChapter, setSelectedChapter] = useState<BookChapter | null>(null);
 
   return (
-    <section className="py-16 px-6 bg-gradient-to-b from-background to-slate-50/50">
+    <section id="book-chapters" className="py-16 px-6 bg-gradient-to-b from-background to-slate-50/50">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent">

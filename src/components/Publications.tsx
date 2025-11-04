@@ -104,7 +104,7 @@ export const Publications = () => {
   const [selectedTag, setSelectedTag] = useState("All");
   const [selectedPublication, setSelectedPublication] = useState<Publication | null>(null);
   const filteredPublications = selectedTag === "All" ? publications : publications.filter(pub => pub.tags.includes(selectedTag));
-  return <section className="py-20 px-4 bg-gradient-to-b from-background to-muted/20">
+  return <section id="publications" className="py-20 px-4 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">

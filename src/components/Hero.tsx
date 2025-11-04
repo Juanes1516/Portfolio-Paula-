@@ -5,7 +5,7 @@ import profilePhoto from "@/assets/profile-photo-paula.jpg";
 export const Hero = () => {
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-accent/10 px-6 py-20">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-accent/10 px-6 py-20">
       <div className="max-w-6xl w-full grid lg:grid-cols-2 gap-12 items-center">
         {/* Profile Image */}
         <div className="flex justify-center lg:justify-end order-1 lg:order-2 animate-fade-in">

@@ -73,7 +73,7 @@ export const ScholarMetrics = ({
   ];
 
   return (
-    <section className="py-8 px-4 sm:px-6 lg:px-8 bg-background">
+    <section id="scholar-metrics" className="py-8 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-3xl mx-auto">
         <Separator className="mb-6" />
         

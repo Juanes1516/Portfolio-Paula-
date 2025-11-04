@@ -26,7 +26,7 @@ const courses: CourseCard[] = [{
   tags: ["Physiology", "Analysis", "Management"]
 }];
 export const CoursesTeaching = () => {
-  return <section className="py-16 px-6 bg-gradient-to-b from-slate-50/50 to-background">
+  return <section id="courses" className="py-16 px-6 bg-gradient-to-b from-slate-50/50 to-background">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-12">

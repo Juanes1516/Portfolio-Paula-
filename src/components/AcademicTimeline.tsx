@@ -311,7 +311,7 @@ export const AcademicTimeline = () => {
     setTimeout(() => setSelectedEvent(null), 300);
   };
 
-  return <section className="min-h-screen bg-gradient-to-b from-accent/5 to-background px-6 py-20">
+  return <section id="academic-timeline" className="min-h-screen bg-gradient-to-b from-accent/5 to-background px-6 py-20">
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Header */}
         <div className="text-center space-y-4 animate-fade-in">
