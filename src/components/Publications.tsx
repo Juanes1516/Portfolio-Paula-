@@ -142,18 +142,11 @@ export const Publications = () => {
             {filteredPublications.map(pub => <CarouselItem key={pub.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                 <Card className="h-full cursor-pointer hover:scale-105 transition-transform hover:shadow-lg" onClick={() => setSelectedPublication(pub)}>
                   {pub.image ? <img src={pub.image} alt={pub.title} className="h-48 w-full object-cover" /> : <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                      <BookOpen className="w-16 h-16 text-primary/40" />
+                      
                     </div>}
 
                   <CardHeader className="pb-3">
-                    <div className="flex items-start justify-between gap-2 mb-2">
-                      <Badge variant="secondary" className="shrink-0">
-                        {pub.year}
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        {pub.type}
-                      </Badge>
-                    </div>
+                    
                     <CardTitle className="text-lg line-clamp-3 leading-tight">{pub.title}</CardTitle>
                   </CardHeader>
 
